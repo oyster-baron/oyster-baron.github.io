@@ -1,30 +1,39 @@
 $(function() {
 
-  function toggleChangeBtn() {
-    var slideIndex = $('.slide').index($('.active'));
-    $('.change-btn').show();
-    if (slideIndex == 0) {
-      $('.prev-btn').hide();
-    } else if (slideIndex == $(".slide").length - 1 ) {
-      $('.next-btn').hide();
-    }
-  }
-
-  $('.index-btn').click(function() {
-    $('.active').removeClass('active');
-    var clickedIndex = $('.index-btn').index($(this));
-    $('.slide').eq(clickedIndex).addClass('active');
-    toggleChangeBtn();
+  $('#login-show').click(function() {
+    $('#login-modal').fadeIn();
   });
 
-  $('.change-btn').click(function() {
-    var $displaySlide = $('.active');
-    $displaySlide.removeClass('active');
-    if ($(this).hasClass('next-btn')) {
-      $displaySlide.next().addClass('active');
-    } else {
-      $displaySlide.prev().addClass('active');
+  $('.signup-show').click(function() {
+    $('#signup-modal').fadeIn();
+  });
+
+  $('.close-modal').click(function() {
+    $('#login-modal').fadeOut();
+    $('#signup-modal').fadeOut();
+  });
+
+  $('.lesson-hover').hover(
+    function() {
+      $(this).find('.text-contents').addClass('text-active');
+    },
+    function() {
+      $(this).find('.text-contents').removeClass('text-active');
     }
-    toggleChangeBtn();
+  );
+
+  // FAQのアコーディオン
+  $('.faq-list-item').click(function() {
+    var $answer = $(this).find('.answer');
+    if($answer.hasClass('open')) {
+      $answer.removeClass('open');
+      $answer.slideUp();
+      $(this).find("span").text("+");
+    } else {
+      $answer.addClass('open');
+      $answer.slideDown();
+      $(this).find("span").text("-");
+
+    }
   });
 });
