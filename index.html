@@ -1,36 +1,148 @@
 <!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>ktmtの遊び場</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="slide-wrapper">
-      <h2 class="slide-title">写真スライドテスト</h2>
-        <div class="change-btn-wrapper">
-          <div class="change-btn prev-btn">← 前へ</div>
-          <div class="change-btn next-btn">次へ →</div>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>e-iDol</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-left">
+        <img class="logo" src="image/logo.png">
+      </div>
+      <div class="header-right">
+        <div class="login" id="login-show">ログイン</div>
+      </div>
+    </div>
+  </header>
+  <div class="signup-modal-wrapper" id="signup-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="fa fa-2x fa-times"></i>
+      </div>
+      <div id="signup-form">
+        <h2>Emailで新規登録</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">新規登録</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="login-modal-wrapper" id="login-modal">
+    <div class="modal">
+      <div class="close-modal">
+        <i class="fa fa-2x fa-times"></i>
+      </div>
+      <div id="login-form">
+        <h2>Emailログイン</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">ログイン</div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="top-wrapper">
+    <div class="container">
+      <h1>I WANT TO SING.<br>I WANT TO DANCE.</h1>
+      <p>e-iDolは全国のアイドルを応援するWebサービスです。(仮)<br>アイドルに憧れるあなた。既にアイドルとして活躍しているあなた。一緒にアイドルライフを歩んでいきましょう。</p>
+      <div class="btn signup signup-show">アイドル登録はこちら</div>
+      <p>or</p>
+      <div class="btn facebook"><span class="fa fa-facebook"></span>Facebookで登録</div>
+      <div class="btn twitter"><span class="fa fa-twitter"></span>Twitterで登録</div>
+    </div>
+  </div>
+  <div class="lesson-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>How to Use This WebSite</h2>
+      </div>
+      <div class="lessons">
+        <div class="lesson lesson-hover">
+          <div class="lesson-icon">
+            <img src="image/red.png">
+            <p>Media</p>
+          </div>
+          <p class="text-contents">ダンスの動画、作成した楽曲、ブログなど様々なメディアを投稿できます。あなたの魅力を世界に発信しましょう!</p>
         </div>
-        <ul class="slides">
-          <li class="slide active"><img src="image/010.jpg"></li>
-          <li class="slide"><img src="image/020.jpg"></li>
-          <li class="slide"><img src="image/030.jpg"></li>
-          <li class="slide"><img src="image/040.jpg"></li>
-          <li class="slide"><img src="image/050.JPG"></li>
-        </ul>
-        <div class="index-btn-wrapper">
-          <div class="index-btn">1</div>
-          <div class="index-btn">2</div>
-          <div class="index-btn">3</div>
-          <div class="index-btn">4</div>
-          <div class="index-btn">5</div>
+        <div class="lesson lesson-hover">
+          <div class="lesson-icon">
+            <img src="image/blue.png">
+            <p>Search</p>
+          </div>
+          <p class="text-contents">e-iDolに登録している100万人のアイドルの中であなたの世界一の推しを簡単に探し出すことができます。</p>
+        </div>
+        <div class="lesson lesson-hover">
+          <div class="lesson-icon">
+            <img src="image/green.png">
+            <p>Study</p>
+          </div>
+          <p class="text-contents">世界で活躍しているプロが作成した、アイドルに必要なダンスや歌などのレッスン動画等を見ることが出来ます。</p>
+        </div>
+        <div class="lesson lesson-hover">
+          <div class="lesson-icon">
+            <img src="image/black.png">
+            <p>Aword</p>
+          </div>
+          <p class="text-contents">毎年夏と冬にアイドル世界大会を開催しています。優勝したら企業から特別なオファーが来るかも……？</p>
         </div>
       </div>
-     <div class="video">
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/Bigf1PCwqdI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>  
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+    </div>
+  </div>
+  <div class="faq-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <ul id="faq-list">
+          <li class="faq-list-item">
+            <h3 class="question">e-iDolは有料ですか。</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>ほとんどの機能を無料で使うことが出来ます。アイドルへのお布施は有料となります。</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">世界大会に優勝したら本当に企業からのオファーが来るのですか。</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>多分来ると思います。</p>
+            </div>
+          </li>
+          <li class="faq-list-item">
+            <h3 class="question">このWebサイトは本物ですか。</h3>
+            <span>+</span>
+            <div class="answer">
+              <p>本物なわけないでしょ。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="message-wrapper">
+    <div class="container">
+      <div class="heading">
+        <h2>さぁ、あなたもe-iDolでアイドルライフを歩んでみませんか?</h2>
+        <h3 id="tagline">Let's to be idle, go to the heaven!</h3>
+      </div>
+      <div class="btn message signup-show">今すぐアイドル登録する</div>
+    </div>
+  </div>
+  <footer>
+    <div class="container">
+      <img src="image/footer_logo.png">
+      <p>このサイトは現実世界に何の関係もありませんのでご注意ください。</p>
+    </div>
+  </footer>
+
+   <script src="script.js"></script>
+</body>
 </html>
