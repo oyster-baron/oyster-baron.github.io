@@ -161,6 +161,15 @@ header {
   cursor: pointer;
 }
 
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display : none;
+}
+
+
 .lesson-wrapper {
   height: 500px;
   padding-bottom: 80px;
