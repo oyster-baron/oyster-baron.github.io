@@ -24,6 +24,17 @@
     padding-top : 130px;
   }
 
+  /* 「.top-wrapper h1」のfont-sizeを24pxに指定 */
+  .top-wrapper h1{
+    font-size : 24px;
+
+  }
+
+  /* 「.top-wrapper p」のfont-sizeを14pxに指定 */
+  .top-wrapper p{
+    font-size : 14px
+  }
+
 }
 /* タブレット向けレイアウト
 @media all and (max-width: 1200px) {
