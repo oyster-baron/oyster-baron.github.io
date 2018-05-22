@@ -10,6 +10,10 @@ a{
   text-decoration: none;
 }
 
+.clear{
+  clear : left;
+}
+
 .top-wrapper {
   padding: 180px 0 100px 0;
   background-image: url(image/top.JPG);
@@ -95,6 +99,14 @@ header {
   background-color: rgba(255,255,255,0.5);
 }
 
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  display: none;
+}
+
 .header-right .login {
   line-height: 65px;
   padding: 0 25px;
@@ -175,7 +187,6 @@ header {
 
 
 .lesson-wrapper {
-  height: 500px;
   padding-bottom: 80px;
   background-color: #f7f7f7;
   text-align: center;
