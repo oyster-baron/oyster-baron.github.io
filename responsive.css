@@ -8,12 +8,39 @@
     text-align: center;
   }
 
+  .header-left {
+    float: left;
+  }
+
   .header-right{
     display : none ;
   }
 
   .menu-icon{
     display : block;
+  }
+
+  .modal {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+    background-color: #e6ecf0;
+    padding: 20px 0 40px;
+    border-radius: 10px;
+    width: 350px;
+    height: auto;
+    text-align: center;
+  }
+
+  #submit-btn {
+    display: inline-block;
+    padding: 14px 80px;
+    background-color: #5dca88;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    margin: 10px auto;
+    cursor: pointer;
   }
 
   /* .btnのwidthを100%に指定してください */
